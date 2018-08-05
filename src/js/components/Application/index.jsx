@@ -8,6 +8,8 @@ import { Router, Route, browserHistory } from 'react-router'
 
 import store from 'utils/store'
 
+import './style.scss'
+
 const history = syncHistoryWithStore(browserHistory, store)
 
 class Application extends Component {
@@ -16,13 +18,15 @@ class Application extends Component {
 
 		this.state = {
 			
-		}
+        }
 	}
 	
 	render() {
 		return (
 			<div className={'my-first-project-application'}>
-				My first project 😎
+				<div className={'my-first-project-application-wrapper'}>
+					<p className={'my-first-project-application-wrapper-text'}>Welcome to my first project</p>
+				</div>
 			</div>
 		)
 	}

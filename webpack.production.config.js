@@ -2,9 +2,10 @@ const path = require('path')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-process.env.NODE_ENV = 'development'
+process.env.NODE_ENV = "production"
 
 module.exports = {
 	entry: './src/js/index.js',
@@ -14,9 +15,7 @@ module.exports = {
 		filename: 'build.js',
 		path: path.join(__dirname, 'build')
 	},
-
-	devtool: 'source-map',
-
+	
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, 'src/js/'),
@@ -80,13 +79,15 @@ module.exports = {
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
 		}),
-		
+
+		new UglifyJsPlugin(),
+
 		new HtmlWebpackPlugin({
 			template: 'index.ejs',
 			title: 'My first project',
 		}),
 
-		new ExtractTextPlugin('style.css'),
+		new ExtractTextPlugin("style.css"),
 		
 		new webpack.LoaderOptionsPlugin({
 			options: {

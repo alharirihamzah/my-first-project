@@ -1,0 +1,28 @@
+#my-first-project {
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	position: absolute;
+}
+
+.my-first-project-application {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	background: white;
+
+	&-wrapper {
+		height: 100%;
+		display: flex;
+		
+		&-text {
+			margin: auto;
+			color: grey;
+			font-size: 40px;
+			font-weight: 800;
+		}
+	}
+}
