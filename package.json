@@ -13,13 +13,16 @@
 	},
 	"homepage": "https://github.com/alharirihamzah/my-first-project/blob/master/README.md",
 	"main": "index.js",
+	"engines": {
+		"node": "8.11.1"
+	},
 	"scripts": {
 		"build:dev": "webpack --config webpack.development.config.js --progress --watch",
 		"server:dev": "NODE_ENV=development PORT=8080 nodemon server/index.js",
 		"server:prod": "NODE_ENV=production PORT=8080 nodemon server/index.js",
 		"build:prod": "webpack --config webpack.production.config.js --colors",
-		"prod": "concurrently \"yarn server:prod\" \"yarn build:prod\"",
-		"dev": "concurrently \"yarn server:dev\" \"yarn build:dev\""
+		"prod": "concurrently \"npm run server:prod\" \"npm run build:prod\"",
+		"dev": "concurrently \"npm run server:dev\" \"npm run build:dev\""
 	},
 	"dependencies": {
 		"electron": "2.0.6",
