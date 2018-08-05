@@ -19,7 +19,7 @@
 	"scripts": {
 		"build:dev": "webpack --config webpack.development.config.js --progress --watch",
 		"server:dev": "NODE_ENV=development PORT=8080 nodemon server/index.js",
-		"server:prod": "NODE_ENV=production PORT=8080 nodemon server/index.js",
+		"server:prod": "NODE_ENV=production PORT=8080 node server/index.js",
 		"build:prod": "webpack --config webpack.production.config.js --colors",
 		"prod": "concurrently \"npm run server:prod\" \"npm run build:prod\"",
 		"dev": "concurrently \"npm run server:dev\" \"npm run build:dev\""
