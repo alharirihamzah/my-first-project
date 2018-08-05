@@ -1,0 +1,26 @@
+{
+	"license": "MIT",
+	"version": "0.0.1",
+	"author": "Hamzah Al Hariri",
+	"name": "my-first-project-server",
+	"description": "My first project server",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alharirihamzah/my-first-project.git"
+	},
+	"bugs": {
+		"url": "https://github.com/alharirihamzah/my-first-project/issues"
+	},
+	"homepage": "https://github.com/alharirihamzah/my-first-project/blob/master/README.md",
+	"main": "index.js",
+	"scripts": {
+		"dev": "NODE_ENV=development node index.js"
+	},
+	"dependencies": {
+		"cors": "2.8.1",
+		"request": "2.79.0",
+		"express": "4.14.0",
+		"http-server": "0.9.0",
+		"nodejs-aes256": "1.0.1"
+	}
+}
