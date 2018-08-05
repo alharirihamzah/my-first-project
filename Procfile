@@ -1,1 +1,1 @@
-web: npm run prod
+web: npm run server:prod & npm run build:prod wait -n
